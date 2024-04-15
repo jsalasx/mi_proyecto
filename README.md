@@ -13,6 +13,7 @@ Para grandes volumenes de datos se realizo con un balanceador de carga, con 4 in
 En una prueba de estres con APACHE JMETER de 2000 peticiones la aplicacion no tuvo caidas y respondio bien en 25s de ejecucion.
 
 Se adjunto fotografia de la interfas de Apache JMeter
+![jmeter todo legal](https://github.com/jsalasx/mi_proyecto/assets/102547359/b6fb7187-74d2-4cb3-a9dc-af99b8a8aa0c)
 
 ## Despliegue
 
