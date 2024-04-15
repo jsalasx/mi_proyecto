@@ -92,15 +92,17 @@ aws ecr get-login-password --region my-region | docker login --username AWS --pa
 ```
 
 ## Subir la imagen a Elastic Container Registry
-
+Tagear la imagen
 ```bash
 docker tag todolegal_back my-id.dkr.ecr.my-region.amazonaws.com/my-registry:latest
 ```
+Subir la imagen
 ```bash
 docker push my-id.dkr.ecr.my-region.amazonaws.com/my-registry:latest
 ```
 
 # Despliege en Elastic Kubernetes Service (EKS)
+Revisar los archivos y realizar las modificaciones necesarias.
 ```bash
 aws eks --region my-region update-kubeconfig --name my-cluster
 ```
