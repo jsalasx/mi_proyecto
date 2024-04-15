@@ -38,7 +38,7 @@ class UserCreate(APIView):
             error.append["El usuario no debe estar vacio"]
             return Response({"error": True, "errorMsg": error, "data": None},status=status.HTTP_400_BAD_REQUEST)
 class GetUser(APIView):
+    permission_classes = [IsAuthenticated]
     def get(self,request):
-        permission_classes = [IsAuthenticated]
         user = UserSerializer(request.user).data
         return Response({"error": False, "errorMsg": [], "data": user}, status=status.HTTP_200_OK)

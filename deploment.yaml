@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: django-deployment
+  namespace: nstodolegal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: django
+  template:
+    metadata:
+      labels:
+        app: django
+    spec:
+      containers:
+      - name: django
+        image: 961883253387.dkr.ecr.us-east-2.amazonaws.com/todolegal:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            memory: 128Mi
+            cpu: 250m  # 250 milicores, 0.25 de un core
+          limits:
+            memory: 256Mi
+            cpu: 500m

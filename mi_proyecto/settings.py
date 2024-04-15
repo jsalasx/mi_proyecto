@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-o*$@1n#e5nx$t!@+&b580_9n9%q16$q-_r38gg$n70#0pwo!e)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -102,8 +102,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'todolegal',
         'USER': 'postgres',
-        'PASSWORD': '1234',
-        'HOST': 'localhost', # Un hostname 'localhost' es común para conexiones locales
+        'PASSWORD': 'jose19950908',
+        'HOST': 'todolegal.cdy0auo6k3ks.us-east-2.rds.amazonaws.com', # Un hostname 'localhost' es común para conexiones locales
         'PORT': '5432', # El puerto por defecto de PostgreSQL es 5432
     }
 }
