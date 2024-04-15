@@ -24,10 +24,10 @@ class UserCreate(APIView):
                     
                     if (len(password) < 8):
                         error.append("La contraseña debe tener al menos 8 caracteres")     
-                        return Response({"error": False, "errorMsg": error, "data": None},status=status.HTTP_400_BAD_REQUEST)
+                        return Response({"error": True, "errorMsg": error, "data": None},status=status.HTTP_400_BAD_REQUEST)
                     serializer.is_valid()
                     serializer.save()  
-                    return Response({"error": True, "errorMsg": error, "data": serializer.data}, status=status.HTTP_201_CREATED)
+                    return Response({"error": False, "errorMsg": error, "data": serializer.data}, status=status.HTTP_201_CREATED)
                 else:
                     error.append("El email no debe estar vacio")        
                     return Response({"error": True, "errorMsg": error, "data": None},status=status.HTTP_400_BAD_REQUEST)

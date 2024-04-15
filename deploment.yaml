@@ -4,7 +4,7 @@ metadata:
   name: django-deployment
   namespace: nstodolegal
 spec:
-  replicas: 1
+  replicas: 4
   selector:
     matchLabels:
       app: django
