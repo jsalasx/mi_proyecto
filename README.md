@@ -46,6 +46,11 @@ https://us-east-2.console.aws.amazon.com/ecr/get-started?region=us-east-2
 ```
 
 ## Crear politicas y roles
+
+Descargar este archivo y copiarlo a la raiz del proyecto.
+```
+https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.7.1/docs/install/iam_policy.json
+```
 ```bash
 eksctl utils associate-iam-oidc-provider --cluster my-cluster --approve
 ```
