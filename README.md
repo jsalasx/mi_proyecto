@@ -51,17 +51,27 @@ Descargar este archivo y copiarlo a la raiz del proyecto.
 ```
 https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.7.1/docs/install/iam_policy.json
 ```
+Ejecutar este comando
 ```bash
 eksctl utils associate-iam-oidc-provider --cluster my-cluster --approve
 ```
+Ejecutar este comando
 ```bash
 aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
 ```
+Ejecutar este comando
 ```bash
 eksctl create iamserviceaccount --cluster=todolegal-2 --namespace=kube-system --name=aws-load-balancer-controller  --role-name AmazonEKSLoadBalancerControllerRole --attach-policy-arn=arn:aws:iam::961883253387:policy/AWSLoadBalancerControllerIAMPolicy --approve
 ```
 ## Crear un Balanceador de Carga
-
+Añadir el repositorio 
+```bash
+helm repo add eks https://aws.github.io/eks-charts
+```
+Actualizar el repostirio
+```bash
+helm repo update eks
+```
 ```bash
 helm install aws-load-balancer-controller eks/aws-load-balancer-controller --set clusterName=your-cluster-name --set serviceAccount.create=false --set serviceAccount.name=aws-load-balancer-controller --namespace kube-system
 ```
