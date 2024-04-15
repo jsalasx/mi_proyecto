@@ -1,4 +1,8 @@
 # Tareas Backend
+## URL DE PRUEBAS
+```bash
+https://k8s-nstodole-webnginx-69400ae802-1980802023.us-east-2.elb.amazonaws.com/
+```
 
 ## Tecnologias utilizadas:
 
