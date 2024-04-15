@@ -46,7 +46,9 @@ https://us-east-2.console.aws.amazon.com/ecr/get-started?region=us-east-2
 ```
 
 ## Crear politicas y roles
-
+```bash
+eksctl utils associate-iam-oidc-provider --cluster my-cluster --approve
+```
 ```bash
 aws iam create-policy --policy-name AWSLoadBalancerControllerIAMPolicy --policy-document file://iam_policy.json
 ```
