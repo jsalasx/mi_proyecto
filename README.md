@@ -60,7 +60,7 @@ helm install aws-load-balancer-controller eks/aws-load-balancer-controller --set
 
 ## Generar un certificado con un dominio (Si se desea usar HTTPS) AWS Certificate Manager (ACM)
 
-Solicitar un certifica y configurar los CNAME
+Solicitar un certificado y configurar los CNAME del proveedor de dominio
 ### Demora en 15 y 20 minutos en reconocer el dominio
 
 ## Logearse en Elastic Container Registro (ECR)
